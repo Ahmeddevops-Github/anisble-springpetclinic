@@ -1,0 +1,15 @@
+- hosts: Centos
+  tasks:
+  - name: Install Maven 
+    yum:
+      name: "maven"
+      state: latest  
+    become: true
+
+- hosts: Ubuntu
+  tasks:
+  - name: Install Maven 
+    apt:
+      name: "maven"
+      state: latest  
+    become: true

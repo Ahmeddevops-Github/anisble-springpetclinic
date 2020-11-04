@@ -1,0 +1,17 @@
+- hosts: Centos
+  tasks:
+  - name: Install Java 
+    yum:
+      name: "java-1.8.0-openjdk"
+      state: latest  
+    become: true
+
+- hosts: Ubuntu
+  tasks:
+  - name: Install Java 
+    apt:
+      update_cache: yes
+      name: "default-jdk"
+      state: latest  
+    become: true
+
